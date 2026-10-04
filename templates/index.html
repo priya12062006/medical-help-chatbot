@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>MedCare AI | Medical Information Assistant</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        <div class="logo-icon">+</div>
+        <span>MedCare AI</span>
+    </div>
+
+    <nav>
+        <a href="/" class="active">Home</a>
+        <a href="/chat">AI Assistant</a>
+    </nav>
+
+</header>
+
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="badge">
+            ✦ AI-Powered Medical Information
+        </div>
+
+        <h1>
+            Your Intelligent
+            <span>Medical Assistant</span>
+        </h1>
+
+        <p>
+            Ask questions about medical conditions,
+            symptoms and health information using
+            knowledge retrieved from our medical
+            reference book.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="/chat"
+               class="primary-btn">
+                Start Consultation →
+            </a>
+
+            <a href="#about"
+               class="secondary-btn">
+                Learn More
+            </a>
+
+        </div>
+
+        <div class="trust-row">
+
+            <div>
+                <strong>AI</strong>
+                <span>Powered</span>
+            </div>
+
+            <div>
+                <strong>RAG</strong>
+                <span>Knowledge Based</span>
+            </div>
+
+            <div>
+                <strong>24/7</strong>
+                <span>Available</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="doctor-card">
+
+        <div class="doctor-circle">
+            <span>⚕</span>
+        </div>
+
+        <div class="doctor-status">
+            <span class="green-dot"></span>
+            AI Assistant Online
+        </div>
+
+        <h3>How can I help you?</h3>
+
+        <p>
+            Ask me about a medical condition,
+            disease or health topic.
+        </p>
+
+        <a href="/chat"
+           class="doctor-btn">
+            Ask a Question
+        </a>
+
+    </div>
+
+</section>
+
+
+<section id="about"
+         class="features">
+
+    <div class="section-heading">
+
+        <span>OUR FEATURES</span>
+
+        <h2>
+            Healthcare Information,
+            Made Simpler
+        </h2>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🔎
+            </div>
+
+            <h3>Smart Retrieval</h3>
+
+            <p>
+                Relevant medical information is
+                retrieved from the connected
+                medical knowledge base.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                🤖
+            </div>
+
+            <h3>AI Assistant</h3>
+
+            <p>
+                Get natural-language answers
+                through a locally running
+                Hugging Face language model.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                📚
+            </div>
+
+            <h3>Medical Knowledge</h3>
+
+            <p>
+                Answers are grounded in the
+                medical reference material used
+                by the RAG system.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="disclaimer">
+
+    <strong>Medical Information Notice</strong>
+
+    <p>
+        MedCare AI is an educational medical
+        information assistant and is not a replacement
+        for a qualified doctor or emergency medical care.
+        Always consult a healthcare professional for
+        diagnosis and treatment decisions.
+    </p>
+
+</section>
+
+
+<footer>
+
+    <div>
+        © 2026 MedCare AI
+    </div>
+
+    <div>
+        Medical Information Assistant
+    </div>
+
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>MedCare AI | Assistant</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+
+<body class="chat-page">
+
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            +
+        </div>
+
+        <span>MedCare AI</span>
+
+    </div>
+
+
+    <nav>
+
+        <a href="/">
+            Home
+        </a>
+
+        <a href="/chat"
+           class="active">
+            AI Assistant
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<main class="chat-layout">
+
+
+    <!-- LEFT INFORMATION PANEL -->
+
+    <aside class="chat-sidebar">
+
+        <div class="assistant-profile">
+
+            <div class="assistant-avatar">
+                ⚕
+            </div>
+
+            <h2>MedCare AI</h2>
+
+            <div class="online-status">
+                <span></span>
+                Online
+            </div>
+
+        </div>
+
+
+        <div class="sidebar-section">
+
+            <h4>Suggested Questions</h4>
+
+            <button class="suggestion"
+                    data-question="What is Acromegaly and gigantism?">
+
+                What is Acromegaly?
+
+            </button>
+
+
+            <button class="suggestion"
+                    data-question="What are the symptoms of diabetes?">
+
+                Symptoms of diabetes
+
+            </button>
+
+
+            <button class="suggestion"
+                    data-question="What is hypertension?">
+
+                What is hypertension?
+
+            </button>
+
+
+            <button class="suggestion"
+                    data-question="What causes anemia?">
+
+                Causes of anemia
+
+            </button>
+
+        </div>
+
+
+        <div class="sidebar-bottom">
+
+            <button id="clearChat"
+                    class="clear-btn">
+
+                <i class="fa-solid fa-trash"></i>
+
+                Clear conversation
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- CHAT -->
+
+    <section class="chat-container">
+
+
+        <div class="chat-header">
+
+            <div>
+
+                <h1>
+                    Medical Assistant
+                </h1>
+
+                <p>
+                    AI-powered medical information
+                </p>
+
+            </div>
+
+            <div class="header-status">
+                <span></span>
+                Available
+            </div>
+
+        </div>
+
+
+
+        <div id="messageArea"
+             class="messages">
+
+
+            <!-- Welcome message -->
+
+            <div class="message bot-message">
+
+                <div class="message-avatar">
+                    ⚕
+                </div>
+
+                <div class="message-content">
+
+                    <div class="message-name">
+                        MedCare AI
+                    </div>
+
+                    <div class="bubble">
+
+                        Hello! 👋
+
+                        <br><br>
+
+                        I'm your medical information
+                        assistant. You can ask me about
+                        diseases, symptoms, medical
+                        conditions and general health
+                        information.
+
+                        <br><br>
+
+                        How can I help you today?
+
+                    </div>
+
+                    <div class="message-time">
+                        Just now
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- TYPING INDICATOR -->
+
+        <div id="typing"
+             class="typing hidden">
+
+            <div class="message-avatar">
+                ⚕
+            </div>
+
+            <div class="typing-bubble">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- INPUT -->
+
+        <div class="chat-input-area">
+
+            <form id="messageForm">
+
+                <input
+                    type="text"
+                    id="text"
+                    name="msg"
+                    placeholder="Ask a medical question..."
+                    autocomplete="off"
+                    required
+                >
+
+                <button
+                    type="submit"
+                    id="send">
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                </button>
+
+            </form>
+
+
+            <div class="medical-warning">
+
+                <i class="fa-solid fa-circle-info"></i>
+
+                This AI provides educational information
+                and does not replace professional medical advice.
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+</main>
+
+
+<script src="{{ url_for('static', filename='chat.js') }}"></script>
+
+</body>
+
+</html>
