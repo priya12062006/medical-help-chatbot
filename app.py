@@ -236,44 +236,33 @@ def chatbot():
 
 # =========================================================
 # CHAT API
-# =========================================================
-
-@app.route("/get", methods=["POST"])
+# =========================================================}: {str(e)}"
+@app.route("/get", methods=["GET", "POST"])
 def chat():
+    msg = request.form.get("msg", "").strip()
+
+    if not msg:
+        return "Please enter a medical question."
 
     try:
+        answer = generate_answer(msg)
 
-        msg = request.form.get(
-            "msg",
-            ""
-        ).strip()
+        print("\nANSWER:")
+        print(answer)
 
-        if not msg:
-
-            return "Please enter a medical question."
-
-        print("\nUser:", msg)
-
-        response = ask_medical_question(
-            msg
-        )
-
-        print("AI:", response)
-
-        return response
+        return answer
 
     except Exception as e:
+        import traceback
 
-        print("\nERROR:")
-        print(type(e).__name__)
-        print(e)
+        print("\n" + "!" * 70)
+        print("BACKEND ERROR")
+        print("ERROR TYPE:", type(e).__name__)
+        print("ERROR:", str(e))
+        traceback.print_exc()
+        print("!" * 70)
 
-        return (
-            "Sorry, I couldn't process your question "
-            "right now. Please try again."
-        )
-
-
+        return f"Backend error: {type(e).__name__}: {str(e)}"
 # =========================================================
 # RUN
 # =========================================================
